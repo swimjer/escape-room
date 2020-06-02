@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div ref="content">
         <div v-if="gameData">
         <pre id="game-text"> {{ gameData.text }}</pre>
-        <img v-for="image in images" :key="image" class="game-image" :src="image">
+        <img v-for="(image, index) in images" :key="index" class="game-image" :src="image">
         <p>{{ gameData.question}}
         
         <input @keyup.enter="checkAnswer" v-model="userAnswer">
@@ -25,7 +25,7 @@
 
 <script>
 export default {
-    name: 'Welcome',
+    name: 'GamePhase',
     props: {
         // gameData: Object
     },
@@ -67,6 +67,10 @@ export default {
         let data = this.$store.getters.dataForStep(step) 
         console.log(data)
         this.gameData = data
+
+    
+        this.$nextTick( () => this.$refs.content.scrollIntoView() )
+
         },
         
         checkAnswer() {
@@ -135,7 +139,7 @@ export default {
     button {
         padding:5px;
     }
-    
+
     button.answer {
         margin-top: 5px;
         font-size: 1em;

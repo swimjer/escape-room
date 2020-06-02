@@ -73,18 +73,139 @@ What is pike?
 
         {
             id: 5,
-            text: `no more clues .... .`,
+            text: `Another Training question.`,
             question: '',
             images: [],
             solutions: [''],
             feedback: '',
             hint: '',
             next: {
-                '': 10
+                '': 6
+            },
+        },
+
+        {
+            id: 6,
+            text: `Getting to Dover question.`,
+            question: '',
+            images: [],
+            solutions: [''],
+            feedback: '',
+            hint: '',
+            next: {
+                '': 7
             },
         },
 
 
+        {
+            id: 7,
+            text: `On the boat question.
+            Fill-in-the blanks nautical phrases`,
+            question: '',
+            images: [],
+            solutions: [''],
+            feedback: '',
+            hint: '',
+            next: {
+                '': 8
+            },
+        },
+
+        {
+            id: 8,
+            text: `Swimming question`,
+            question: '',
+            images: [],
+            solutions: [''],
+            feedback: '',
+            hint: '',
+            next: {
+                '': 11
+            },
+        },
+
+
+        {
+            id: 11,
+            text: `Time to get back into the boat for a rest. Your towel is in your locker but you have forgotten the code. The locker has a directional lock. What's the code?`,
+            question: `What's the locker combination?`,
+            images: ['jellyfish_left.jpg','jellyfish_down.jpg', 'jellyfish_up.jpg', 'jellyfish_right.jpg'],
+            solutions: ['ldur'],
+            feedback: 'Enter 4 letters. Type L for left, R for right, U for up and D for down. Don\'t use spaces.',
+            // hint: '',
+            next: {
+                'ldur': 12
+            },
+        },
+
+        {
+            id: 12,
+            text: `More swimming figure out compass heading question`,
+            question: ``,
+            images: [''],
+            solutions: [''],
+            feedback: '',
+            // hint: '',
+            next: {
+                '': 13
+            },
+        },
+
+
+        {
+            id: 13,
+            text: `More swimming`,
+            question: ``,
+            images: [''],
+            solutions: [''],
+            feedback: '',
+            // hint: '',
+            next: {
+                '': 14
+            },
+        },
+
+        {
+            id: 14,
+            text: `More swimming`,
+            question: ``,
+            images: [''],
+            solutions: [''],
+            feedback: '',
+            // hint: '',
+            next: {
+                '': 15
+            },
+        },
+        {
+            id: 15,
+            text: `France is in sight!`,
+            question: ``,
+            images: ['arrive_beach.jpg'],
+            solutions: [''],
+            feedback: '',
+            // hint: '',
+            next: {
+                '': '16'
+            },
+        },
+
+        {
+            id: 16,
+            text: `And you made it to beach at Calais! Congratulations! 
+            
+You are really exhausted, but very happy to have made it. And you are really hungry too. Can you rearange these things to figure out what will you gave to eat?`,
+            question: `What will you have to eat?`,
+            images: ['ant.jpg', 'scissors.jpg'],
+            solutions: ['croissants', 'croissant'],
+            feedback: '',
+            // hint: '',
+            next: {
+                'croissants': 'end',
+                'croissant': 'end'
+            },
+        },
 
     ],
     end: {

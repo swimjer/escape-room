@@ -15,6 +15,11 @@ const router = new VueRouter({
   routes
 })
 
+router.beforeEach( (to, from, next) => {
+  console.log('I am a hook')
+  next()
+})
+
 import store from '@/store'
 
 Vue.config.productionTip = false
